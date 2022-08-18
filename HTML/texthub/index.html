@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Text Hub</title>
+</head>
+
+<body>
+    <div>
+    <!-- navbar starts here -->
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Text Hub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar ends here  -->
+
+    <!-- textform starts here -->
+    <div class="container " style="min-height: 100vh;" id="" >
+        <h1 class="my-4">Text Hub | text anylazer | Text Uppercase </h1>
+        <div class=" my-4">
+            <textarea class="form-control" id="textBox" rows="9"
+                placeholder="Enter Text Here"></textarea>
+        </div>
+        <!-- button starts here -->
+        <button type="button" class="btn btn-primary my-2 mx-1" onclick="handleUpClick(textBox);">Convert to UpperCase</button>
+        <button type="button" class="btn btn-primary my-2 mx-1" onclick="handleLoClick(textBox);">Convert to LowerCase</button>
+        <button type="button" class="btn btn-primary my-2 mx-1" onclick="handleBdClick();">Bold Text</button>
+        <button type="button" class="btn btn-primary my-2 mx-1" onclick="handleXsClick(textBox);">Remove Extra Space</button>
+        <button type="button" class="btn btn-primary my-2 mx-1" onclick="handleCpClick(textBox);">Copy Text</button>
+        <button type="button" class="btn btn-primary my-2 mx-1" onclick="handleClClick(textBox);">Clear Text</button>
+        <!-- buttons ends here -->
+        <div class="container">
+            <h2>Your Text Summary</h2>
+            <span id="wordCount">0</span><span> words </span><span id="CharCount"></span><span> characters</span>
+            <p></p>
+        <h2>Preview</h1>
+        <p id="preview"></p>
+    </div>
+    </div>
+    <!-- textform ends Here -->
+
+    <!-- about starts here -->
+    <div id="about" class="container" style="min-height: 100Vh; padding-top: 7vh;">
+        <h1 class="">About Us</h1>
+        <!-- accordion starts here -->
+        <div class="accordion accordion-flush mt-6" id="accordionFlushExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Accordion Item #1
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                        demonstrate
+                        the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        Accordion Item #2
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                        demonstrate
+                        the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's
+                        imagine
+                        this being filled with some actual content.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Accordion Item #3
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                        demonstrate
+                        the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing
+                        more
+                        exciting happening here in terms of content, but just filling up the space to make it look,
+                        at
+                        least at first glance, a bit more representative of how this would look in a real-world
+                        application.</div>
+                </div>
+            </div>
+        </div>
+        <!-- accordion ends here -->
+        <!-- Start corousel here -->
+        <div id="carouselExampleDark" class="carousel carousel-dark slide my-3" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="10000">
+                <img src="Screenshot (2).png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>WebSite Preview</h5>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img src="Screenshot (3).png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Code Preview</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="Screenshot (4).png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Used Language</h5>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+            <!-- End corousel here -->
+    </div>
+    <!-- about ends here -->
+
+    <!-- contact starts here -->`
+    <div class="container" style="min-height: 100vh; padding-top: 7vh;" id="contact">
+        <h1>Contact Us</h1>
+        <!-- Bootstrap 5 starter form -->
+        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+
+            <!-- Name input -->
+            <div class="mb-3">
+                <label class="form-label" for="name">Name</label>
+                <input class="form-control" id="name" type="text" placeholder="Name" data-sb-validations="required" />
+                <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+            </div>
+
+            <!-- Email address input -->
+            <div class="mb-3">
+                <label class="form-label" for="emailAddress">Email Address</label>
+                <input class="form-control" id="emailAddress" type="email" placeholder="Email Address"
+                    data-sb-validations="required, email" />
+                <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.
+                </div>
+                <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address Email is not
+                    valid.</div>
+            </div>
+
+            <!-- Message input -->
+            <div class="mb-3">
+                <label class="form-label" for="message">Message</label>
+                <textarea class="form-control" id="message" type="text" placeholder="Message" style="height: 10rem;"
+                    data-sb-validations="required"></textarea>
+                <div class="invalid-feedback" data-sb-feedback="message:required">Message is required.</div>
+            </div>
+
+            <!-- Form submissions success message -->
+            <div class="d-none" id="submitSuccessMessage">
+                <div class="text-center mb-3">Form submission successful!</div>
+            </div>
+
+            <!-- Form submissions error message -->
+            <div class="d-none" id="submitErrorMessage">
+                <div class="text-center text-danger mb-3">Error sending message!</div>
+            </div>
+
+            <!-- Form submit button -->
+            <div class="d-grid">
+                <button class="btn btn-primary btn-lg" id="submitButton" type="submit">Submit</button>
+            </div>
+
+        </form>
+
+    </div>
+    <!-- contact ends here -->
+    <!-- footer starts here -->
+<div class="container">
+    <footer class="text-center text-lg-start" style="background-color: #db6930;">
+      <div class="container d-flex justify-content-center py-5">
+        <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #54456b;">
+          <i class="fab fa-facebook-f"></i>
+        </button>
+        <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #54456b;">
+          <i class="fab fa-youtube"></i>
+        </button>
+        <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #54456b;">
+          <i class="fab fa-instagram"></i>
+        </button>
+        <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #54456b;">
+          <i class="fab fa-twitter"></i>
+        </button>
+      </div>
+  
+      <!-- Copyright -->
+      <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2020 Copyright:
+        <a class="text-white" href="https://mdbootstrap.com/">TextHub.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+</div>
+  <!-- End of footer -->
+</div>
+<script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
